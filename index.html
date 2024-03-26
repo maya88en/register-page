@@ -9,7 +9,7 @@
 <body>
     <center>
 
-        <form>
+        <form id="go">
             <h4>Registration Form</h4>
             <!-- Input from User -->
             <input type="text" placeholder='Name' id="name"><br>
@@ -29,7 +29,7 @@
             <label for="css">CSS</label>
             <input type="checkbox" name="skill" id="js">
             <label for="js">JavaScript</label> <br> <br>
-            <input id='btn'  type="submit" placeholder='Register' onclick="register(event)">
+            <button id="show-image-button" type="submit" onclick="register(event)">Register</button>
         </form>
         
         
@@ -37,7 +37,7 @@
         <p>Name: <span id="display_name"></span></p>
         <p>Email: <span id="display_email"></span></p>
         <p>Website: <span id="display_web"></span></p>
-        <p>Image: <img id="display-image" height="100px" width="100px" src="" /></p>
+        <p>Image: <img id="display-image" style="display: none;" height="100px" width="100px" src="" /></p>
         <p><span id="display_genderm"></span></p>
         <p><span id="display_genderf"></span></p>
         
@@ -74,7 +74,21 @@
         reader.readAsDataURL(image);
 
 }
+      const showImageButton = document.getElementById("show-image-button");
+      const myImage = document.getElementById("display-image"); 
+      showImageButton.addEventListener("click", () => { 
+         myImage.style.display = "block"; 
+      });
+
 
     </script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script> 
+        $("form").submit(function () { //you can assign id to your form and used that id instead of form
+        $("#upload").show();
+        return true;
+        });
+    </script> -->
+
 </body>
 </html>
