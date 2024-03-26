@@ -15,8 +15,21 @@
             <input type="text" placeholder='Name' id="name"><br>
             <input type="email" placeholder='Email' id="email"><br>
             <input type="url" placeholder='Website' id="web"><br> 
-            <input id="upload" type="file" onChange="handleImageUpload()" /> <br>
-            <input id='btn' type="submit" placeholder='Register' onclick="register(event)">
+            <label for="upload">Select your photo</label>
+            <input id="upload" type="file" onChange="handleImageUpload()" /><br>
+            <label for="gender">Gender: </label>
+            <input type="text" placeholder="Male" name="gender" id="male">
+            <label for="male"></label> 
+            <input type="text" placeholder="Female" name="gender" id="female" >
+            <label for="female"></label> <br>
+            <label for="skill">Skill: </label>
+            <input type="checkbox" name="skill" id="html">
+            <lable for="html">HTML</lable>
+            <input type="checkbox" name="skill" id="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" name="skill" id="js">
+            <label for="js">JavaScript</label> <br> <br>
+            <input id='btn'  type="submit" placeholder='Register' onclick="register(event)">
         </form>
         
         
@@ -24,7 +37,10 @@
         <p>Name: <span id="display_name"></span></p>
         <p>Email: <span id="display_email"></span></p>
         <p>Website: <span id="display_web"></span></p>
-        <p>Image: <img id="display-image" src="" /></p>
+        <p>Image: <img id="display-image" height="100px" width="100px" src="" /></p>
+        <p><span id="display_genderm"></span></p>
+        <p><span id="display_genderf"></span></p>
+        
     </center>
     <script>
     const register = function (event) {
@@ -32,10 +48,15 @@
     let r_name = document.querySelector("#name").value;
     let r_email = document.querySelector("#email").value;
     let r_web = document.querySelector("#web").value;
+    let r_genderm = document.querySelector("#male").value;
+    let r_genderf = document.querySelector("#female").value;
+    
     // Output on page
     display_name.innerHTML = r_name;
     display_email.innerHTML = r_email;
     display_web.innerHTML = r_web;
+    display_genderm.innerHTML = r_genderm;
+    display_genderf.innerHTML = r_genderf;
     event.preventDefault();
     };
 
