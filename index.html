@@ -23,11 +23,11 @@
             <input type="text" placeholder="Female" name="gender" id="female" >
             <label for="female"></label> <br>
             <label for="skill">Skill: </label>
-            <input type="checkbox" name="skill" id="html">
+            <input type="checkbox" name="skill" id="html" onclick="myFunction(this.id)">
             <lable for="html">HTML</lable>
-            <input type="checkbox" name="skill" id="css">
+            <input type="checkbox" name="skill" id="css" onclick="myFunction(this.id)">
             <label for="css">CSS</label>
-            <input type="checkbox" name="skill" id="js">
+            <input type="checkbox" name="skill" id="js" onclick="myFunction(this.id)">
             <label for="js">JavaScript</label> <br> <br>
             <button id="show-image-button" type="submit" onclick="register(event)">Register</button>
         </form>
@@ -40,6 +40,9 @@
         <p>Image: <img id="display-image" style="display: none;" height="100px" width="100px" src="" /></p>
         <p><span id="display_genderm"></span></p>
         <p><span id="display_genderf"></span></p>
+        <p id="html_text" style="display: none;" >Skill: HTML</p>
+        <p id="css_text" style="display: none;">Skill: CSS</p>
+        <p id="js_text" style="display: none;">Skill: Js</p>
         
     </center>
     <script>
@@ -74,11 +77,29 @@
         reader.readAsDataURL(image);
 
 }
-      const showImageButton = document.getElementById("show-image-button");
-      const myImage = document.getElementById("display-image"); 
-      showImageButton.addEventListener("click", () => { 
-         myImage.style.display = "block"; 
-      });
+        const showImageButton = document.getElementById("show-image-button");
+        const myImage = document.getElementById("display-image"); 
+        showImageButton.addEventListener("click", () => { 
+            myImage.style.display = "block"; 
+        });
+
+        function myFunction1(id) {
+        var checkBox = document.getElementById(id);
+        var text = document.getElementById(id+"_text");
+        if (checkBox.checked == true) {
+            text.style.display = "block";
+        } else {
+            text.style.display = "none";
+        }
+        }
+
+        function myFunction(id) {
+        
+        const myText = document.getElementById(id+"_text"); 
+        showImageButton.addEventListener("click", () => { 
+            myText.style.display = "block"; 
+        });
+        }
 
 
     </script>
