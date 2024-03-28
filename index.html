@@ -7,11 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="box">
     <center>
-
         <form>
             <h4>Registration Form</h4>
             <!-- Input from User -->
+            
             <input type="text" placeholder='Name' id="name"><br>
             <input type="email" placeholder='Email' id="email"><br>
             <input type="url" placeholder='Website' id="web"><br> 
@@ -30,15 +31,18 @@
             <input type="checkbox" name="skill" id="js" onclick="myFunction(this.id)">
             <label for="js">JavaScript</label> <br> <br>
             <button id="show-image-button" type="submit" onclick="register(event)">Register</button>
+            
         </form>
     </center>
         <br>
         <!-- Output Form Details -->
-        <fieldset>
-        <p> <span id="display_name"></span></p>
-        <p> <span id="display_email"></span></p>
-        <p> <span id="display_web"></span></p>
-        <p> <img id="display-image" style="display: none;" height="100px" width="100px" src="" /></p>
+        <section>
+        <ul>
+        <li class="center"> Name:<span id="display_name"></span></li>
+        <li class="center"> Email:<span id="display_email"></span></li>
+        <li class="center"> Website:<span id="display_web"></span></li>
+        <li class="center"> <img id="display-image" style="display: none" height="100px" width="100px" src="" /></li>
+        </ul>
         <ul class="center"> Gender: 
         <li  id="display_genderm"></li>
         <li  id="display_genderf"></li>
@@ -48,8 +52,9 @@
         <li id="css_text" style="display: none;"> CSS</li>
         <li id="js_text" style="display: none;"> Js</li>
         </ul>
-        </fieldset>
-    
+        </section>
+    </div>
+
     <script>
     const register = function (event) {
     // Receive user input

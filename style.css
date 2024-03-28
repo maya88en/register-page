@@ -1,12 +1,37 @@
 
+  .box {
+    border: 2px solid green;
+    width: 50%;
+    background-color: #152733;
+    color: lightcoral;
+  }
+    div {
+        margin: 0 auto;
+        padding: 10px;
+        
+      }
+  
+  input[type=text], input[type=email], input[type=url]{
+    width: 25%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+  }
+  
 .center {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 
 li {
     margin-right: 0.5rem;
-    text-indent: 5px;
-    
+    text-indent: 5px;  
+     
 }
+
+img {
+    display: block;
+    margin-left: auto;
+  }
