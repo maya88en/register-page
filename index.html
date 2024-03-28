@@ -31,20 +31,25 @@
             <label for="js">JavaScript</label> <br> <br>
             <button id="show-image-button" type="submit" onclick="register(event)">Register</button>
         </form>
-        
-        
-        <!-- Output Form Details -->
-        <p>Name: <span id="display_name"></span></p>
-        <p>Email: <span id="display_email"></span></p>
-        <p>Website: <span id="display_web"></span></p>
-        <p>Image: <img id="display-image" style="display: none;" height="100px" width="100px" src="" /></p>
-        <p><span id="display_genderm"></span></p>
-        <p><span id="display_genderf"></span></p>
-        <p id="html_text" style="display: none;" >Skill: HTML</p>
-        <p id="css_text" style="display: none;">Skill: CSS</p>
-        <p id="js_text" style="display: none;">Skill: Js</p>
-        
     </center>
+        <br>
+        <!-- Output Form Details -->
+        <fieldset>
+        <p> <span id="display_name"></span></p>
+        <p> <span id="display_email"></span></p>
+        <p> <span id="display_web"></span></p>
+        <p> <img id="display-image" style="display: none;" height="100px" width="100px" src="" /></p>
+        <ul class="center"> Gender: 
+        <li  id="display_genderm"></li>
+        <li  id="display_genderf"></li>
+        </ul>
+        <ul class="center"> Skills:  
+        <li id="html_text" style="display: none;" >HTML</li>
+        <li id="css_text" style="display: none;"> CSS</li>
+        <li id="js_text" style="display: none;"> Js</li>
+        </ul>
+        </fieldset>
+    
     <script>
     const register = function (event) {
     // Receive user input
@@ -83,15 +88,15 @@
             myImage.style.display = "block"; 
         });
 
-        function myFunction1(id) {
-        var checkBox = document.getElementById(id);
-        var text = document.getElementById(id+"_text");
-        if (checkBox.checked == true) {
-            text.style.display = "block";
-        } else {
-            text.style.display = "none";
-        }
-        }
+        // function myFunction(id) {
+        // var checkBox = document.getElementById(id);
+        // var text = document.getElementById(id+"_text");
+        // if (checkBox.checked == true) {
+        //     text.style.display = "block";
+        // } else {
+        //     text.style.display = "none";
+        // }
+        // }
 
         function myFunction(id) {
         

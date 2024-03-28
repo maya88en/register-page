@@ -1,0 +1,12 @@
+
+.center {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin-right: 0.5rem;
+    text-indent: 5px;
+    
+}
