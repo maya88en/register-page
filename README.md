@@ -1,8 +1,10 @@
-## LetsGrowMore
+## LetsGrowMore Internship
 
 ## Task 3
 
-## Display Register Form Data on Same Page
+## Display Register Form Data on The Same Page
+
+## Live Link: https://maya88en.github.io/register-page/
 
 ## My References: 
 
@@ -10,6 +12,7 @@
 ### Solution 8
 https://www.codeproject.com/Questions/1232562/I-want-to-display-form-data-on-same-page-using-jav
 ### Note: I Used Same Method for Form Data for Email, Website, Gender; Look Carefully How Gender is Created for M and F
+For Gender, I changed Input to Text to be able to call it in function and show text after submit button
 
 ### Function to Upload Image As Input to HTML Form
 ### Look At the Solution Answered By Harish Soni & Edited By Pang
