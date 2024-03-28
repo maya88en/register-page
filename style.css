@@ -8,7 +8,6 @@
     div {
         margin: 0 auto;
         padding: 10px;
-        
       }
 
       section {
@@ -36,6 +35,9 @@ li {
     text-indent: 5px;  
      
 }
+
+/* This moves the image to the right, but I didn't take it 
+and left the image to show in the center like the name, email, etc */
 
 /* img {
     display: block;

@@ -73,26 +73,58 @@
     event.preventDefault();
     };
 
-    function handleImageUpload() 
-{
+        // Function to upload Image as Input in HTML
+            function handleImageUpload() 
+            {
+            var image = document.getElementById("upload").files[0];
 
-        var image = document.getElementById("upload").files[0];
+            var reader = new FileReader();
 
-        var reader = new FileReader();
+            reader.onload = function(e) {
+            document.getElementById("display-image").src = e.target.result;
+            }
 
-        reader.onload = function(e) {
-        document.getElementById("display-image").src = e.target.result;
-        }
+            reader.readAsDataURL(image);
 
-        reader.readAsDataURL(image);
+            }
+        // Steps to Understand The Method:
+        // 1. The <input> element with type="file" is used to create a file input field where the user can select an image file.
+        // 2. The accept="image/*" attribute ensures that only image files can be selected by the user. The accept attribute value can be modified to specify the specific image formats you want to allow (e.g., accept="image/jpeg,image/png").
+        // 3. The onchange event handler is attached to the <input> element. It triggers the handleImageUpload function when the user selects an image file.
+        // 4. The handleImageUpload function is called when an image file is selected. It retrieves the selected file using event.target.files[0].
+        // 5. A FileReader object is created, and the readAsDataURL method is used to read the content of the image file. This method reads the file and converts it into a Data URL, which represents the image data as a base64-encoded string.
+        // 6. The onload event handler of the FileReader is triggered when the file reading is complete. It provides access to the Data URL via the e.target.result property.
+        // 7. You can perform further actions with the obtained Data URL, such as displaying the image preview, uploading the image to a server, or processing it using JavaScript.
 
-}
+
+        // Function to Show Image After Clicking Register Button
         const showImageButton = document.getElementById("show-image-button");
         const myImage = document.getElementById("display-image"); 
         showImageButton.addEventListener("click", () => { 
             myImage.style.display = "block"; 
         });
 
+        // Step 1 − Create an HTML file with a button element and an image element.
+
+        // Step 2 − In the image element, use the style attribute to set the display property to "none". This will hide the image by default.
+
+        // Step 3 − In the JavaScript code, use the getElementById() method to select the button and image elements.
+
+        // Step 4 − Use the addEventListener method to attach a click event listener to the button element.
+
+        // Step 5 − In the event listener function, use the style.display property of the image element to change its value from "none" to "block". This will make the image visible.
+
+
+        // Function to Display CheckBox Text AFTER Clicking Register Button
+        function myFunction(id) {
+        
+        const myText = document.getElementById(id+"_text"); 
+        showImageButton.addEventListener("click", () => { 
+            myText.style.display = "block"; 
+        });
+        }
+
+        // The below function displays the text from checkbox, but the above function shows this text after click register.
         // function myFunction(id) {
         // var checkBox = document.getElementById(id);
         // var text = document.getElementById(id+"_text");
@@ -102,16 +134,7 @@
         //     text.style.display = "none";
         // }
         // }
-
-        function myFunction(id) {
         
-        const myText = document.getElementById(id+"_text"); 
-        showImageButton.addEventListener("click", () => { 
-            myText.style.display = "block"; 
-        });
-        }
-
-
     </script>
 
 
